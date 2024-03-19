@@ -15,6 +15,6 @@ I specialize in leveraging Snowflake and cloud computing technologies, such as A
 Outside of the tech realm, I'm an avid BMW enthusiast and love exploring the vibrant culture of NYC.
 
 ## Connect
-Let's connect on [LinkedIn](https://www.linkedin.com/in/andreaskefalas/) or drop me an email at andrekef@gmail.com.
+Let's connect on [LinkedIn](https://www.linkedin.com/in/andreas-kefalas-553a70a3/) or drop me an email at andrekef@gmail.com.
 
 Thanks for stopping by!
