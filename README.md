@@ -1,22 +1,24 @@
-# About Me
+# whoami
 
-## Introduction
-Hey there, I'm Andreas Kefalas, a passionate problem solver and data engineer based in Queens, NY. Originally from Athens, Greece, my journey has taken me from the basketball courts of UM St. Louis to the dynamic world of data engineering and development.
-## The simplest website ever coded
-https://andrekef.github.io/simple_website/
+andreas kefalas, a passionate problem solver and data engineer based in queens, ny. originally from athens, greece, my journey has taken me from the basketball courts of um st. louis to the dynamic world of data engineering and development.
 
-## Technical Expertise
-I specialize in leveraging Snowflake and cloud computing technologies, such as AWS, to architect robust data pipelines and infrastructures. Whether it's SQL, Python, or even R for a nostalgic throwback to college days, I'm proficient in crafting efficient solutions. With a knack for Apache products, I configure solid data pipelines that fuel actionable insights.
+## the simplest website ever coded
+[check it out here!](https://andrekef.github.io/simple_website/)
 
-## Key Skills
-- Data Engineering: Snowflake, Cloud Computing (AWS), SQL, Python, R
-- BI Tools: Tableau, PowerBI, Apache Superset
-- Apache Products: Kafka, Spark, Airflow
+## what i do
+i specialize in leveraging snowflake and cloud computing technologies, such as aws, to architect robust data pipelines and infrastructures. whether it's sql, python, or even r for a nostalgic throwback to college days, i'm proficient in crafting efficient solutions. with a knack for apache products, i configure solid data pipelines that fuel actionable insights.
 
-## Interests
-Outside of the tech realm, I'm an avid BMW enthusiast and love exploring the vibrant culture of NYC.
+## my tools
+- data engineering: snowflake, cloud computing (aws), sql, python, r
+- bi tools: tableau, powerbi, apache superset
+- apache products: kafka, spark, airflow
 
-## Connect
-Let's connect on [LinkedIn](https://www.linkedin.com/in/andreas-kefalas-553a70a3/) or drop me an email at andrekef@gmail.com.
+## what i like
+you'll find me wrenching under a bmw hood or breaking door panels trying to change window regulators.
 
-Thanks for stopping by!
+## socials
+connect with me on [linkedin](https://www.linkedin.com/in/andreas-kefalas-553a70a3/) or drop me an email at andrekef@gmail.com.
+
+thanks for stopping by!
+
+I can definitely write properly too. But..I wa told all lowercase makes me cooler.
