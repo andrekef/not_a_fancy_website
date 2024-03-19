@@ -2,6 +2,8 @@
 
 ## Introduction
 Hey there, I'm Andreas Kefalas, a passionate problem solver and data engineer based in Queens, NY. Originally from Athens, Greece, my journey has taken me from the basketball courts of UM St. Louis to the dynamic world of data engineering and development.
+## The simplest website ever coded
+https://andrekef.github.io/simple_website/
 
 ## Technical Expertise
 I specialize in leveraging Snowflake and cloud computing technologies, such as AWS, to architect robust data pipelines and infrastructures. Whether it's SQL, Python, or even R for a nostalgic throwback to college days, I'm proficient in crafting efficient solutions. With a knack for Apache products, I configure solid data pipelines that fuel actionable insights.
