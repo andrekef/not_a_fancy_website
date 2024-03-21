@@ -6,7 +6,7 @@
     <title>Andreas Kefalas - Data Engineer</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Add your custom styles here */
+        /* Custom CSS styles */
     </style>
 </head>
 <body>
@@ -16,58 +16,57 @@
 
         <!-- Navigation Tabs -->
         <ul class="nav nav-tabs" id="myTabs" role="tablist">
-            <!-- Add your navigation tabs here -->
+            <li class="nav-item">
+                <a class="nav-link active" id="skills-tab" data-toggle="tab" href="#skills" role="tab" aria-controls="skills" aria-selected="true">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="experience-tab" data-toggle="tab" href="#experience" role="tab" aria-controls="experience" aria-selected="false">Experience</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="education-tab" data-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="false">Education</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="projects-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="projects" aria-selected="false">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="additional-tab" data-toggle="tab" href="#additional" role="tab" aria-controls="additional" aria-selected="false">Additional Info</a>
+            </li>
         </ul>
         
         <!-- Tab Content -->
         <div class="tab-content" id="myTabContent">
-            <!-- Add your tab content here -->
-        </div>
-
-        <!-- Additional Resume Information -->
-        <div class="section-heading">Additional Information</div>
-        <p>Queens, NY | 929-569-9420 | andrekef@gmail.com | LinkedIn | Github</p>
-        <p>Authorized to work for any US employer.</p>
-        
-        <!-- Skills -->
-        <div class="section-heading">Skills</div>
-        <ul>
-            <li>Programming & Tools: Python (pandas, numpy, SciPy), R (ggplot2, Matplotlib, Seaborn), Bash scripting, SaaS Products, Redis</li>
-            <li>Data Manipulation, ETL and Visualization: Tableau, PowerBI, Apache Superset and Spark, SPSS, NetworkX, Grafana, Fivetran</li>
-            <li>Cloud & Databases: AWS (EC2, S3, Lamda, Lake Formation), Snowflake, SQL, PostgreSQL, AWS Redshift, Jenkins, Docker Containers, Cron, Kubernetes</li>
-            <li>Agile Environment: Pivotal Tracker, Jira, Slack, ClickUp</li>
-        </ul>
-
-        <!-- Professional Experience -->
-        <div class="section-heading">Professional Experience</div>
-        <p>Tru Solutions, Remote - Data Engineer (May 2023 - Present)</p>
-        <p>Tru Solutions, Remote - Technical Project Manager (Aug 2022 – May 2023)</p>
-        <p>CUNY Queens College, Queens, NY - Quantitative Analysis in R Lecturer (Jan 2022 - Aug 2022)</p>
-        <p>CUNY Queens College, Queens, NY - Scientific Research Assistant (Aug 2021 - Jan 2022)</p>
-
-        <!-- Education -->
-        <div class="section-heading">Education</div>
-        <p>Masters of Arts (M.A.) in Data Analytics and Applied Social Research - GPA: 3.5/4.0 (Aug 2021 - May 2023)</p>
-        <p>Bachelor of Arts (B.S.) in Information Systems - GPA: 3.8/4.0 (Aug 2013- Dec 2017)</p>
-
-        <!-- Honors/Awards -->
-        <div class="section-heading">Honors/Awards</div>
-        <p>Queens College, Scholarship recipient 2021-2023</p>
-        <p>University of Missouri - Saint Louis Men’s Basketball, Scholarship recipient 2013-2017</p>
-        <p>Dean’s List for 4 semesters</p>
-
-        <!-- Projects -->
-        <div class="section-heading">Projects</div>
-        <p>NYC OPEN DATA - 311 Pre/Post Covid-19 Service Request Analysis (Jan 2023 - May 2023)</p>
-
-        <!-- Open-Source Contributions -->
-        <div class="section-heading">Open-Source Contributions</div>
-        <p>Contributed to open-source projects, including Apache Superset, by documenting existing issues and proposing solutions via sophisticated pull requests to enhance development functionality.</p>
-    </div>
-
-    <!-- Bootstrap and jQuery Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+            <!-- Skills -->
+            <div class="tab-pane fade show active" id="skills" role="tabpanel" aria-labelledby="skills-tab">
+                <div class="section-heading">Skills</div>
+                <ul>
+                    <li>Programming & Tools: Python (pandas, numpy, SciPy), R (ggplot2, Matplotlib, Seaborn), Bash scripting, SaaS Products, Redis</li>
+                    <li>Data Manipulation, ETL and Visualization: Tableau, PowerBI, Apache Superset and Spark, SPSS, NetworkX, Grafana, Fivetran</li>
+                    <li>Cloud & Databases: AWS (EC2, S3, Lamda, Lake Formation), Snowflake, SQL, PostgreSQL, AWS Redshift, Jenkins, Docker Containers, Cron, Kubernetes</li>
+                    <li>Agile Environment: Pivotal Tracker, Jira, Slack, ClickUp</li>
+                </ul>
+            </div>
+            
+            <!-- Experience -->
+            <div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
+                <div class="section-heading">Experience</div>
+                <p>Tru Solutions, Remote - Data Engineer (May 2023 - Present)</p>
+                <p>Tru Solutions, Remote - Technical Project Manager (Aug 2022 – May 2023)</p>
+                <p>CUNY Queens College, Queens, NY - Quantitative Analysis in R Lecturer (Jan 2022 - Aug 2022)</p>
+                <p>CUNY Queens College, Queens, NY - Scientific Research Assistant (Aug 2021 - Jan 2022)</p>
+            </div>
+            
+            <!-- Education -->
+            <div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="education-tab">
+                <div class="section-heading">Education</div>
+                <p>Masters of Arts (M.A.) in Data Analytics and Applied Social Research - GPA: 3.5/4.0 (Aug 2021 - May 2023)</p>
+                <p>Bachelor of Arts (B.S.) in Information Systems - GPA: 3.8/4.0 (Aug 2013- Dec 2017)</p>
+            </div>
+            
+            <!-- Projects -->
+            <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
+                <div class="section-heading">Projects</div>
+                <p>NYC OPEN DATA - 311 Pre/Post Covid-19 Service Request Analysis (Jan 2023 - May 2023)</p>
+            </div>
+            
+            <!-- Additional Information -->
+            <div class
