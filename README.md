@@ -6,10 +6,10 @@ andreas kefalas, a passionate problem solver and data engineer based in queens, 
 [check it out here!](https://andrekef.github.io/not_a_fancy_website/)
 
 ## what i do
-i specialize in leveraging snowflake and cloud computing technologies, such as aws, to architect robust data pipelines and infrastructures. whether it's sql, python, or even r for a nostalgic throwback to college days, i'm proficient in crafting efficient solutions. with a knack for apache products, i configure solid data pipelines that fuel actionable insights.
+i specialize in leveraging snowflake and cloud computing technologies, such as aws, to architect robust data pipelines and infrastructures. whether it's sql, python, or even r for a nostalgic throwback to college days, i'm proficient in crafting efficient solutions. with a knack for apache products, i configure solid data pipelines that fuel actionable insights, fast and efficient.
 
 ## my tools
-- data engineering: snowflake, cloud computing (aws), sql, python, r
+- data engineering: snowflake, cloud computing (aws), sql, python, r, redis, fivetran etl, 
 - bi tools: tableau, powerbi, apache superset
 - apache products: kafka, spark, airflow
 
