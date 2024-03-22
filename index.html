@@ -5,24 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andreas Kefalas - Data Engineer</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-       <style>
+        <style>
         /* Custom CSS styles */
         body {
             /* Set background color */
-            background-color: #f8f9fa; /* Change this color to your desired background color */
-            /* Set background image */
-            background-image: url('https://raw.githubusercontent.com/andrekef/not_a_fancy_website/main/background.jpg');
-            background-size: auto 50%; /* Adjust the size of the background image */
-            background-repeat: no-repeat;
-            background-position: bottom bottom;
+            background-color: #f3f3f3; /* Off white background */
+            color: black; /* Set text color to black for contrast */
+            padding-bottom: 100px; /* Add padding at the bottom to ensure space for the bottom background */
+            position: relative; /* Set position to relative */
         }
+        /* Top background image */
+        .top-background {
+            position: absolute; /* Set position to absolute */
+            top: 0; /* Position at the top of the page */
+            left: 0; /* Align to the left */
+            width: 100%; /* Set width to cover the entire width */
+            height: 100%; /* Set height to cover the entire height */
+            background-image: url('https://raw.githubusercontent.com/andrekef/not_a_fancy_website/main/background.jpg');
+            background-size: cover; /* Cover the entire background */
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: blur(5px); /* Apply blur effect to the background */
+            z-index: -1; /* Set z-index to send it to the back */
+        }
+        /* Container for content */
         .container {
-            position: relative; /* Ensure the container remains on top of the background */
-            z-index: 1; /* Ensure the container remains on top of the background */
+            z-index: 1; /* Set z-index to ensure it's above the background */
+            padding: 20px; /* Add padding for better readability */
+        }
+        /* Emphasize headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: bold; /* Make headings bold */
+        }
+        /* Set background color for tabs */
+        .nav-tabs {
+            background-color: #ffffff; /* White background for tabs */
+        }
+        /* Set background color for tab content */
+        .tab-content {
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background for tab content */
+            padding: 20px; /* Add padding for better readability */
+            border-radius: 10px; /* Add border radius for rounded corners */
+        }
+        /* Style links */
+        a {
+            color: black; /* Set link color to black */
+            text-decoration: underline; /* Underline links */
+        }
+        /* Remove underline on hover for links */
+        a:hover {
+            text-decoration: none; /* Remove underline on hover */
         }
     </style>
 </head>
 <body>
+        <!-- Top background image -->
+    <div class="top-background"></div>
+    
     <div class="container">
         <h1>Andreas Kefalas</h1>
         <h2>Data Engineer</h2>
