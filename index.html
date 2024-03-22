@@ -8,9 +8,18 @@
     <style>
         /* Custom CSS styles */
         body {
+            /* Set background color */
+            background-color: #f8f9fa; /* Change this color to your desired background color */
+            /* Set background image */
             background-image: url('https://raw.githubusercontent.com/andrekef/not_a_fancy_website/main/background.jpg');
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
+            background-position: center center;
+            opacity: 0.2; /* Adjust the opacity as needed */
+        }
+        .container {
+            position: relative; /* Ensure the container remains on top of the background */
+            z-index: 1; /* Ensure the container remains on top of the background */
         }
     </style>
 </head>
