@@ -21,4 +21,4 @@ connect with me on [linkedin](https://www.linkedin.com/in/andreas-kefalas-553a70
 
 thanks for stopping by!
 
-I can definitely write properly too. But..I wa told all lowercase makes me cooler.
+I can definitely write properly too. But..I was told all lowercase makes me cooler.
