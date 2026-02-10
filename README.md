@@ -1,7 +1,7 @@
 # whoami
 andreas kefalas, a data scientist and problem solver based in queens, ny. originally from athens, greece, my journey has taken me from the basketball courts of um st. louis to building ml models and data pipelines at canon usa.
 ## the simplest website ever coded
-check it out here!
+check it out here! https://andrekef.github.io/not_a_fancy_website/ 
 ## what i do
 i build attribution models, lead scoring systems, and data pipelines that actually move the needle. whether it's snowflake, python, or wrangling messy marketing data into something useful, i like making things work. lately i've been integrating llms and generative ai into analytics workflows to speed things up.
 ## my tools
