@@ -1,194 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title style="color: white;">Andreas Kefalas - Data Scientist</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <style>
-        /* Custom CSS styles */
-        body {
-            /* Set background color */
-            background-color: #f3f3f3; /* Off white background */
-            color: black; /* Set text color to black for contrast */
-            padding-bottom: 100px; /* Add padding at the bottom to ensure space for the bottom background */
-            position: relative; /* Set position to relative */
-        }
-        /* Top background image */
-        .top-background {
-            position: absolute; /* Set position to absolute */
-            top: 0; /* Position at the top of the page */
-            left: 0; /* Align to the left */
-            width: 100%; /* Set width to cover the entire width */
-            height: 100%; /* Set height to cover the entire height */
-            background-image: url('https://raw.githubusercontent.com/andrekef/not_a_fancy_website/main/background.jpg');
-            background-size: cover; /* Cover the entire background */
-            background-repeat: no-repeat;
-            background-position: center;
-            filter: blur(0px); /* Apply blur effect to the background */
-            z-index: -1; /* Set z-index to send it to the back */
-        }
-        /* Container for content */
-        .container {
-            z-index: 1; /* Set z-index to ensure it's above the background */
-            padding: 20px; /* Add padding for better readability */
-        }
-        /* Emphasize headings */
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: bold; /* Make headings bold */
-        }
-        /* Set background color for tabs */
-        .nav-tabs {
-            background-color: #ffffff; /* White background for tabs */
-        }
-        /* Set background color for tab content */
-        .tab-content {
-            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background for tab content */
-            padding: 20px; /* Add padding for better readability */
-            border-radius: 10px; /* Add border radius for rounded corners */
-        }
-        /* Style links */
-        a {
-            color: black; /* Set link color to black */
-            text-decoration: underline; /* Underline links */
-        }
-        /* Remove underline on hover for links */
-        a:hover {
-            text-decoration: none; /* Remove underline on hover */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andreas Kefalas – Data Scientist</title>
+
+  <!-- Bootstrap (grid only, we mostly override styles) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    :root {
+      --accent: #2563eb;
+      --bg: #f6f7f9;
+      --text: #1f2933;
+      --muted: #6b7280;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("https://raw.githubusercontent.com/andrekef/not_a_fancy_website/main/background.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-links {
+      margin-top: 30px;
+    }
+
+    .hero-links a {
+      color: white;
+      margin: 0 12px;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+    }
+
+    .hero-links a:hover {
+      border-bottom: 2px solid white;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    section h3 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+
+    /* ---------- SKILLS ---------- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-box h4 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    /* ---------- EXPERIENCE ---------- */
+    .role {
+      margin-bottom: 25px;
+    }
+
+    .role-title {
+      font-weight: 600;
+    }
+
+    .role-meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    /* ---------- PROJECTS ---------- */
+    .project-title {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--accent);
+    }
+  </style>
 </head>
+
 <body>
-        <!-- Top background image -->
-    <div class="top-background"></div>
-    
-    <div class="container">
-        <h1>Andreas Kefalas</h1>
-        <h2>Data Scientist</h2>
 
-        <!-- Navigation Tabs -->
-        <ul class="nav nav-tabs" id="myTabs" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="skills-tab" data-toggle="tab" href="#skills" role="tab" aria-controls="skills" aria-selected="true">Skills</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="experience-tab" data-toggle="tab" href="#experience" role="tab" aria-controls="experience" aria-selected="false">Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="education-tab" data-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="false">Education</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="projects-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="projects" aria-selected="false">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="socials-tab" data-toggle="tab" href="#socials" role="tab" aria-controls="socials" aria-selected="false">Contact and Socials</a>
-            </li>
-        </ul>
-        
-        <!-- Tab Content -->
-        <div class="tab-content" id="myTabContent">
-            <!-- Skills -->
-            <div class="tab-pane fade show active" id="skills" role="tabpanel" aria-labelledby="skills-tab">
-                <div class="section-heading"></div>
-                <ul>
-                    <li><strong>Programming & Tools</strong>: Python (pandas, numpy, scikit-learn, SciPy), R (ggplot2, Matplotlib, Seaborn), SQL, Bash scripting, SaaS Products, Redis</li>
-                    <li><strong>Machine Learning & Analytics</strong>: Attribution Modeling, Lead Scoring, Predictive Analytics, A/B Testing, Regression Analysis, Customer Segmentation</li>
-                    <li><strong>Data Manipulation, ETL and Visualization</strong>: Tableau, PowerBI, Apache Superset and Spark, SPSS, NetworkX, Grafana, Fivetran</li>
-                    <li><strong>Cloud & Databases</strong>: AWS (EC2, S3, Lambda, Lake Formation), Snowflake, SQL, PostgreSQL, AWS Redshift, Jenkins, Docker Containers, Cron, Kubernetes</li>
-                    <li><strong>Agile Environment</strong>: Pivotal Tracker, Jira, Slack, ClickUp</li>
-                    <li><strong> "Need it by 4pm this Friday" last resource skill </strong>: <img src="https://raw.githubusercontent.com/andrekef/not_a_fancy_website/main/meme.jpg" alt="Friday 4 PM Taskmaster's Handbook"></li>
-                </ul>
-            </div>
-            
-            <!-- Experience -->
-            <div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
-                <ul>
-                    <li><strong>Data Scientist, Canon USA, Melville, NY (March 2025 - Present)</strong></li>
-                    <ul>
-                        <li>Developed multi-touch attribution models to quantify marketing channel effectiveness across Canon's B2B and consumer segments, enabling data-driven budget allocation decisions impacting $2M+ in annual ad spend.</li>
-                        <li>Built and deployed lead scoring systems using gradient boosting and logistic regression, improving sales qualification efficiency by 35% and reducing time-to-conversion for high-intent prospects.</li>
-                        <li>Led the migration of legacy marketing databases (MDB) to modern cloud infrastructure, consolidating 15+ data sources and reducing query latency by 60%.</li>
-                        <li>Established standardized analytics frameworks adopted across cross-functional teams as part of a newly formed center of excellence initiative.</li>
-                        <li>Partnered with Product, Sales, and Marketing stakeholders to translate business requirements into scalable data pipelines and self-service dashboards.</li>
-                        <li>Automated recurring reporting workflows using Python and SQL, reclaiming 10+ hours per week previously spent on manual data pulls.</li>
-                        <li>Evaluated and integrated generative AI tools into analytics workflows, accelerating insight delivery and enabling rapid prototyping of data solutions.</li>
-                        <li>Applied NLP techniques and large language models for unstructured data analysis, automated report generation, and customer feedback synthesis.</li>
-                    </ul>
-                    <li><strong>Data Engineer, Tru Solutions, Remote (May 2023 - March 2025)</strong></li>
-                    <ul>
-                        <li>Built real-time dashboards and automated API ingestion pipelines using Python, Jenkins, and AWS Lake Formation for energy sector clients.</li>
-                        <li>Orchestrated multi-source data integration via Fivetran into Snowflake, improving reporting accuracy by 30% for executive stakeholders.</li>
-                        <li>Optimized query performance through Materialized Views and caching strategies, reducing latency and warehouse costs.</li>
-                    </ul>
-                    <li><strong>Technical Project Manager, Tru Solutions, Remote (Aug 2022 - May 2023)</strong></li>
-                    <ul>
-                        <li>Led cross-functional projects spanning Client Services and Product Development, defining scope and delivering on tight timelines.</li>
-                        <li>Built a predictive churn model that reduced customer attrition by 25% and optimized pipelines to cut data processing time by 30%.</li>
-                        <li>Drove operational improvements that reduced service calls by 25% and on-site visits by 35% within 2 months of deployment.</li>
-                    </ul>
-                    <li><strong>Scientific Research Assistant, CUNY Queens College, Queens, NY (Aug 2021 - Jan 2022)</strong></li>
-                    <ul>
-                        <li>Processed and visualized large data volumes, established connections via NetworkX, automated tasks for a 40% reduction in manual work, and used Python and R for clustered environment visualizations and metadata analysis in scientific journals.</li>
-                    </ul>
-                    <li><strong>Quantitative Analysis in R Lecturer, CUNY Queens College, Queens, NY (Jan 2022 - Aug 2022)</strong></li>
-                    <ul>
-                        <li>Developed lab assignments, evaluated homework and exams, provided feedback, offered guidance on improving code-writing skills, and taught a class of 25 students, aiding them in grasping key concepts, R package use, and executing coursework effectively.</li>
-                    </ul>
-                    <li><strong>Junior Developer, TruQC, Remote (May 2017 – Aug 2020)</strong></li>
-                    <ul>
-                        <li>Designed and implemented dynamic application reports leveraging JavaScript and JSON schemas for enhanced functionality and user experience.</li>
-                        <li>Led the management of Continuous Integration builds in Jenkins, ensuring seamless environmental synchronization through timely fix commits.</li>
-                        <li>Crafted custom SQL queries to generate insightful reports, driving data-driven decision-making.</li>
-                        <li>Performed in an Agile environment, utilizing cutting-edge CI/CD tools like Jenkins and Pivotal Tracker for efficient project tracking and ticket management.</li>
-                    </ul>
-                </ul>
-            </div>
-            
-            <!-- Education -->
-            <div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="education-tab">
-                <div class="section-heading"></div>
-                <p><strong>Masters of Arts (M.A.) in Data Analytics and Applied Social Research - GPA: 3.5/4.0 (Aug 2021 - May 2023)</strong><br>
-                Queens College, Queens, NY</p>
-                <p><strong>Bachelor of Arts (B.S.) in Information Systems - GPA: 3.8/4.0 (Aug 2013 - Dec 2017)</strong><br>
-                University of Missouri - Saint Louis, Saint Louis, MO</p>
-            </div>
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Andreas Kefalas</h1>
+    <h2>Data Scientist</h2>
+    <p>
+      Turning messy, high-volume data into clear business decisions through
+      analytics, machine learning, and scalable data systems.
+    </p>
+    <div class="hero-links">
+      <a href="https://www.linkedin.com/in/andreas-kefalas-553a70a3/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/andrekef" target="_blank">GitHub</a>
+      <a href="Resume_Kefalas.pdf" target="_blank">Resume</a>
+    </div>
+  </header>
 
-            <!-- Projects -->
-            <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
-                <div class="section-heading"></div>
-                <p><strong>Marketing Attribution Pipeline (2025)</strong><br>
-                Designed end-to-end attribution system integrating CRM, web analytics, and paid media data to measure true marketing ROI. Built custom data models in Python and SQL to assign fractional credit across touchpoints using algorithmic and rules-based approaches.</p>
-                <p><strong>Lead Scoring Model (2025)</strong><br>
-                Developed predictive lead scoring framework using XGBoost and logistic regression ensembles, trained on 50K+ historical conversion records. Model deployed via automated pipeline with weekly retraining cycles to adapt to shifting customer behavior.</p>
-                <p><strong>NYC OPEN DATA - 311 Pre/Post Covid-19 Service Request Analysis (Sept 2025 - Feb 2026)</strong><br>
-                Extracted and modeled data from a 9 million-row, 13-year-old dataset, conducting comprehensive analysis with R, including regression testing, correlation analysis, and A/B testing methodologies, and created visualizations using the mapPluto R library to understand service request patterns across New York City's five boroughs.</p>
-            </div>
-            <!-- Socials -->
-            <!-- Socials -->
-            <div class="tab-pane fade" id="socials" role="tabpanel" aria-labelledby="socials-tab">
-                <p><strong>Contact and Socials:</strong></p>
-                <ul>
-                    <li>Location: NYC</li>
-                    <li>Phone: 646-484-8689</li>
-                    <li>Email: andrekef@gmail.com</li>
-                </ul>
-                <p><strong>Online Profiles:</strong></p>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/andreas-kefalas-553a70a3/" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://github.com/andrekef" target="_blank">GitHub</a></li>
-                </ul>
-                <!-- Link to view PDF -->
-                <p><strong>View Resume:</strong></p>
-                <ul>
-                    <li><a href="Resume_Kefalas.pdf" target="_blank">Resume</a></li>
-                </ul>
-            </div>
-        </div>
+  <!-- SKILLS -->
+  <section>
+    <h3>Skills</h3>
+    <div class="skills-grid">
+      <div class="card skill-box">
+        <h4>Programming</h4>
+        <p>Python, R, SQL, Bash, Redis</p>
+      </div>
+      <div class="card skill-box">
+        <h4>Machine Learning</h4>
+        <p>Attribution Modeling, Lead Scoring, A/B Testing, Regression</p>
+      </div>
+      <div class="card skill-box">
+        <h4>Data & Visualization</h4>
+        <p>Tableau, PowerBI, Superset, Spark, Grafana</p>
+      </div>
+      <div class="card skill-box">
+        <h4>Cloud & Infra</h4>
+        <p>AWS, Snowflake, Redshift, Docker, Kubernetes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <h3>Experience</h3>
+
+    <div class="card role">
+      <div class="role-title">Data Scientist – Canon USA</div>
+      <div class="role-meta">Melville, NY · March 2025 – Present</div>
+      <ul>
+        <li>Built multi-touch attribution models influencing $2M+ annual ad spend.</li>
+        <li>Developed lead scoring systems improving qualification efficiency by 35%.</li>
+        <li>Migrated legacy marketing databases to cloud infrastructure, cutting latency by 60%.</li>
+        <li>Applied NLP and LLMs for unstructured data analysis and automated reporting.</li>
+      </ul>
     </div>
 
-    <!-- Bootstrap and jQuery Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="card role">
+      <div class="role-title">Data Engineer – Tru Solutions</div>
+      <div class="role-meta">Remote · May 2023 – March 2025</div>
+      <ul>
+        <li>Built real-time dashboards and API ingestion pipelines in AWS.</li>
+        <li>Integrated multi-source data into Snowflake via Fivetran.</li>
+        <li>Optimized warehouse performance using materialized views and caching.</li>
+      </ul>
+    </div>
+
+    <div class="card role">
+      <div class="role-title">Technical Project Manager – Tru Solutions</div>
+      <div class="role-meta">Remote · Aug 2022 – May 2023</div>
+      <ul>
+        <li>Led cross-functional teams delivering data products on tight timelines.</li>
+        <li>Built a churn prediction model reducing attrition by 25%.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h3>Projects</h3>
+
+    <div class="card">
+      <div class="project-title">Marketing Attribution Pipeline (2025)</div>
+      <p>
+        Designed an end-to-end attribution system integrating CRM, web analytics,
+        and paid media data to measure true marketing ROI using Python and SQL.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="project-title">Lead Scoring Model (2025)</div>
+      <p>
+        Built XGBoost and logistic regression ensembles trained on 50K+ records,
+        deployed via automated weekly retraining pipelines.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="project-title">NYC 311 Service Request Analysis</div>
+      <p>
+        Analyzed 9M+ records using R to identify pre/post COVID service patterns,
+        including regression analysis and geospatial visualization.
+      </p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <h3>Education</h3>
+    <div class="card">
+      <p><strong>M.A. Data Analytics & Applied Social Research</strong><br>
+        Queens College · GPA 3.5</p>
+      <p><strong>B.S. Information Systems</strong><br>
+        University of Missouri – St. Louis · GPA 3.8</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Andreas Kefalas · NYC
+  </footer>
+
 </body>
 </html>
