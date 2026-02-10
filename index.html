@@ -5,45 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Andreas Kefalas – Data Scientist</title>
 
-  <!-- Bootstrap (grid only, we mostly override styles) -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
   <style>
+    /* ---------- THEME VARIABLES ---------- */
     :root {
-      --accent: #2563eb;
       --bg: #f6f7f9;
+      --card: #ffffff;
       --text: #1f2933;
       --muted: #6b7280;
+      --accent: #2563eb;
+      --shadow: rgba(0,0,0,0.08);
     }
 
+    body.dark {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #60a5fa;
+      --shadow: rgba(0,0,0,0.4);
+    }
+
+    /* ---------- GLOBAL ---------- */
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 90px auto;
+      padding: 0 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: 0 12px 30px var(--shadow);
+      margin-bottom: 30px;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
     }
 
     /* ---------- HERO ---------- */
     .hero {
       background:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
         url("https://raw.githubusercontent.com/andrekef/not_a_fancy_website/main/background.jpg");
       background-size: cover;
       background-position: center;
       color: white;
-      padding: 120px 20px;
+      padding: 130px 20px;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-weight: 700;
       margin-bottom: 10px;
     }
 
     .hero h2 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       font-weight: 400;
       opacity: 0.9;
     }
@@ -51,20 +99,20 @@
     .hero p {
       margin-top: 20px;
       font-size: 1.1rem;
-      max-width: 600px;
+      max-width: 650px;
       margin-left: auto;
       margin-right: auto;
+      opacity: 0.95;
     }
 
     .hero-links {
-      margin-top: 30px;
+      margin-top: 35px;
     }
 
     .hero-links a {
       color: white;
-      margin: 0 12px;
+      margin: 0 14px;
       font-weight: 500;
-      text-decoration: none;
       border-bottom: 2px solid transparent;
     }
 
@@ -72,24 +120,20 @@
       border-bottom: 2px solid white;
     }
 
-    /* ---------- SECTIONS ---------- */
-    section {
-      max-width: 1000px;
-      margin: 80px auto;
-      padding: 0 20px;
-    }
-
-    section h3 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 14px;
-      padding: 30px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      margin-bottom: 30px;
+    /* ---------- DARK MODE TOGGLE ---------- */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--card);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 14px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px var(--shadow);
+      font-size: 0.9rem;
+      z-index: 1000;
+      user-select: none;
     }
 
     /* ---------- SKILLS ---------- */
@@ -100,17 +144,13 @@
     }
 
     .skill-box h4 {
-      font-size: 1.1rem;
       margin-bottom: 10px;
     }
 
     /* ---------- EXPERIENCE ---------- */
-    .role {
-      margin-bottom: 25px;
-    }
-
     .role-title {
       font-weight: 600;
+      font-size: 1.1rem;
     }
 
     .role-meta {
@@ -123,35 +163,28 @@
       padding-left: 20px;
     }
 
-    /* ---------- PROJECTS ---------- */
-    .project-title {
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
     /* ---------- FOOTER ---------- */
     footer {
       text-align: center;
-      padding: 40px 20px;
+      padding: 50px 20px;
       color: var(--muted);
       font-size: 0.9rem;
-    }
-
-    a {
-      color: var(--accent);
     }
   </style>
 </head>
 
 <body>
 
+  <!-- DARK MODE -->
+  <div class="theme-toggle" id="themeToggle">🌙 Dark</div>
+
   <!-- HERO -->
   <header class="hero">
     <h1>Andreas Kefalas</h1>
     <h2>Data Scientist</h2>
     <p>
-      Turning messy, high-volume data into clear business decisions through
-      analytics, machine learning, and scalable data systems.
+      Turning messy, high-volume data into confident business decisions
+      through analytics, machine learning, and scalable data systems.
     </p>
     <div class="hero-links">
       <a href="https://www.linkedin.com/in/andreas-kefalas-553a70a3/" target="_blank">LinkedIn</a>
@@ -170,7 +203,7 @@
       </div>
       <div class="card skill-box">
         <h4>Machine Learning</h4>
-        <p>Attribution Modeling, Lead Scoring, A/B Testing, Regression</p>
+        <p>Attribution, Lead Scoring, A/B Testing, Regression</p>
       </div>
       <div class="card skill-box">
         <h4>Data & Visualization</h4>
@@ -187,33 +220,24 @@
   <section>
     <h3>Experience</h3>
 
-    <div class="card role">
+    <div class="card">
       <div class="role-title">Data Scientist – Canon USA</div>
-      <div class="role-meta">Melville, NY · March 2025 – Present</div>
+      <div class="role-meta">March 2025 – Present · Melville, NY</div>
       <ul>
-        <li>Built multi-touch attribution models influencing $2M+ annual ad spend.</li>
-        <li>Developed lead scoring systems improving qualification efficiency by 35%.</li>
-        <li>Migrated legacy marketing databases to cloud infrastructure, cutting latency by 60%.</li>
-        <li>Applied NLP and LLMs for unstructured data analysis and automated reporting.</li>
+        <li>Built multi-touch attribution models influencing $2M+ in annual ad spend.</li>
+        <li>Developed lead scoring systems improving sales efficiency by 35%.</li>
+        <li>Migrated legacy marketing databases to cloud infrastructure.</li>
+        <li>Applied NLP and LLMs for automated reporting and insight generation.</li>
       </ul>
     </div>
 
-    <div class="card role">
+    <div class="card">
       <div class="role-title">Data Engineer – Tru Solutions</div>
-      <div class="role-meta">Remote · May 2023 – March 2025</div>
+      <div class="role-meta">May 2023 – March 2025 · Remote</div>
       <ul>
         <li>Built real-time dashboards and API ingestion pipelines in AWS.</li>
-        <li>Integrated multi-source data into Snowflake via Fivetran.</li>
-        <li>Optimized warehouse performance using materialized views and caching.</li>
-      </ul>
-    </div>
-
-    <div class="card role">
-      <div class="role-title">Technical Project Manager – Tru Solutions</div>
-      <div class="role-meta">Remote · Aug 2022 – May 2023</div>
-      <ul>
-        <li>Led cross-functional teams delivering data products on tight timelines.</li>
-        <li>Built a churn prediction model reducing attrition by 25%.</li>
+        <li>Integrated multi-source data into Snowflake using Fivetran.</li>
+        <li>Optimized warehouse performance and reduced query latency.</li>
       </ul>
     </div>
   </section>
@@ -223,26 +247,26 @@
     <h3>Projects</h3>
 
     <div class="card">
-      <div class="project-title">Marketing Attribution Pipeline (2025)</div>
+      <strong>Marketing Attribution Pipeline</strong>
       <p>
-        Designed an end-to-end attribution system integrating CRM, web analytics,
-        and paid media data to measure true marketing ROI using Python and SQL.
+        End-to-end attribution system integrating CRM, web analytics,
+        and paid media data to measure true marketing ROI.
       </p>
     </div>
 
     <div class="card">
-      <div class="project-title">Lead Scoring Model (2025)</div>
+      <strong>Lead Scoring Model</strong>
       <p>
-        Built XGBoost and logistic regression ensembles trained on 50K+ records,
-        deployed via automated weekly retraining pipelines.
+        XGBoost and logistic regression ensembles trained on 50K+ records
+        with automated retraining pipelines.
       </p>
     </div>
 
     <div class="card">
-      <div class="project-title">NYC 311 Service Request Analysis</div>
+      <strong>NYC 311 Service Request Analysis</strong>
       <p>
-        Analyzed 9M+ records using R to identify pre/post COVID service patterns,
-        including regression analysis and geospatial visualization.
+        9M+ row analysis using R to uncover pre/post COVID service patterns
+        with geospatial visualizations.
       </p>
     </div>
   </section>
@@ -251,17 +275,48 @@
   <section>
     <h3>Education</h3>
     <div class="card">
-      <p><strong>M.A. Data Analytics & Applied Social Research</strong><br>
-        Queens College · GPA 3.5</p>
-      <p><strong>B.S. Information Systems</strong><br>
-        University of Missouri – St. Louis · GPA 3.8</p>
+      <p><strong>M.A. Data Analytics</strong><br>Queens College · GPA 3.5</p>
+      <p><strong>B.S. Information Systems</strong><br>University of Missouri – St. Louis · GPA 3.8</p>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     © 2026 Andreas Kefalas · NYC
   </footer>
+
+  <!-- ---------- JS ---------- -->
+  <script>
+    /* Dark mode persistence */
+    const toggle = document.getElementById("themeToggle");
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark");
+      toggle.textContent = "☀️ Light";
+    }
+
+    toggle.onclick = () => {
+      document.body.classList.toggle("dark");
+      const isDark = document.body.classList.contains("dark");
+      toggle.textContent = isDark ? "☀️ Light" : "🌙 Dark";
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    };
+
+    /* Scroll reveal */
+    const sections = document.querySelectorAll("section");
+
+    const reveal = () => {
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          sec.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", reveal);
+    reveal();
+  </script>
 
 </body>
 </html>
